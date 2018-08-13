@@ -66,7 +66,7 @@ var StockTable = React.createClass({
         }
         return (
             <div className="row">
-            <table className="table-hover">
+            <table className="table table-dark table-hover">
                 <thead>
                     <tr>
                         <th>Symbol</th>

@@ -2,18 +2,57 @@
 <html>
 <head>
     <title>Trader Desktop</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css" type="text/css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/gridstack.js/0.4.0/gridstack.min.css"/>
     <script src="http://fb.me/react-0.13.1.js"></script>
     <script src="http://fb.me/JSXTransformer-0.13.1.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/feed-socketio.js"></script>
     <!--<script src="js/feed-mock.js"></script>-->
     <script type="text/jsx" src="js/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.0/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.0/lodash.min.js"></script>
+    <script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/gridstack.js/0.4.0/gridstack.min.js'></script>
+    <script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/gridstack.js/0.4.0/gridstack.jQueryUI.min.js'></script>
+    
+
+    <style type="text/css">
+        .grid-stack {
+            background:  #272727;
+        }
+
+        .grid-stack-item-content {
+            color: #f3f5f7;
+            text-align: center;
+            background-color: #3e3f3f;
+        }
+    </style>
 </head>
 
 <body>
-<div class="container" id="main"></div>
-</body>
+        <div class="grid-stack">
+                <div class="grid-stack-item"
+                    data-gs-x="0" data-gs-y="0"
+                    data-gs-width="5" data-gs-height="10">
+                        <div class="grid-stack-item-content" id="main"></div>
+                </div>
+                <div class="grid-stack-item"
+                    data-gs-x="5" data-gs-y="0"
+                    data-gs-width="4" data-gs-height="4">
+                        <div class="grid-stack-item-content"></div>
+                </div>
+            </div>
+            
+            <!--<div class="container" id="main"></div>-->
 
+<script type="text/javascript">
+    $(function () {
+        $('.grid-stack').gridstack();
+    });
+    </script>
+
+</body>
 </html>

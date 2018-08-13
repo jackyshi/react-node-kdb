@@ -16,10 +16,14 @@ td:last-child {
     text-align: center;
 }
 
+td:hover {
+    background: rgb(19, 15, 15);
+}
+
 th, td {
     max-width: 74px;
     width: 74px;
-    border: solid 1px #DDDDDD;
+    border: solid 1px rgb(0, 0, 0);
     padding: 5px;
 }
 
